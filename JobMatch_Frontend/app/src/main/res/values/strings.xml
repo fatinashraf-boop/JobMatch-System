@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">JobMatch_Frontend</string>
+    <string-array name="job_types">
+        <item>Select Job Type</item>
+        <item>Full-time</item>
+        <item>Part-time</item>
+        <item>Contract</item>
+        <item>Internship</item>
+    </string-array>
+
+    <string-array name="job_create_statuses">
+        <item>Open</item>
+        <item>Draft</item>
+        <item>Closed</item>
+    </string-array>
+
+    <string-array name="job_browse_types">
+        <item>All Job Types</item>
+        <item>Full-time</item>
+        <item>Part-time</item>
+        <item>Internship</item>
+        <item>Contract</item>
+    </string-array>
+</resources>

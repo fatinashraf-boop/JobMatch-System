@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+
+        <!-- ============================================ -->
+        <!-- TITLE -->
+        <!-- ============================================ -->
+
+        <TextView
+            android:id="@+id/tvPageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Job"
+            android:textColor="#1A1A1A"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/tvPageSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Create a new job opportunity for candidates."
+            android:textColor="#757575"
+            android:textSize="14sp" />
+
+
+        <!-- ============================================ -->
+        <!-- JOB TITLE -->
+        <!-- ============================================ -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Job Title *"
+            android:textColor="#1A1A1A"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/etJobTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. Junior Software Developer"
+            android:inputType="textCapWords"
+            android:maxLines="1"
+            android:textColor="#1A1A1A" />
+
+
+        <!-- ============================================ -->
+        <!-- DESCRIPTION -->
+        <!-- ============================================ -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Job Description *"
+            android:textColor="#1A1A1A"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:gravity="top|start"
+            android:hint="Describe the role and responsibilities"
+            android:inputType="textMultiLine"
+            android:paddingTop="12dp"
+            android:textColor="#1A1A1A" />
+
+
+        <!-- ============================================ -->
+        <!-- REQUIRED SKILLS -->
+        <!-- ============================================ -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Required Skills *"
+            android:textColor="#1A1A1A"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/etSkills"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|start"
+            android:hint="e.g. Java, MySQL, REST API, Git"
+            android:inputType="textMultiLine"
+            android:minHeight="80dp"
+            android:textColor="#1A1A1A" />
+
+
+        <!-- ============================================ -->
+        <!-- QUALIFICATIONS -->
+        <!-- ============================================ -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Qualifications"
+            android:textColor="#1A1A1A"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/etQualifications"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|start"
+            android:hint="e.g. Bachelor's Degree in IT"
+            android:inputType="textMultiLine"
+            android:minHeight="80dp"
+            android:textColor="#1A1A1A" />
+
+
+        <!-- ============================================ -->
+        <!-- LOCATION -->
+        <!-- ============================================ -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Location *"
+            android:textColor="#1A1A1A"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/etLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. Ipoh, Perak"
+            android:inputType="textCapWords"
+            android:maxLines="1"
+            android:textColor="#1A1A1A" />
+
+
+        <!-- ============================================ -->
+        <!-- SALARY -->
+        <!-- ============================================ -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Salary Range (RM)"
+            android:textColor="#1A1A1A"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/etSalaryMin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Minimum"
+                android:inputType="numberDecimal"
+                android:textColor="#1A1A1A" />
+
+
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="1dp" />
+
+
+            <EditText
+                android:id="@+id/etSalaryMax"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Maximum"
+                android:inputType="numberDecimal"
+                android:textColor="#1A1A1A" />
+
+        </LinearLayout>
+
+
+        <!-- ============================================ -->
+        <!-- JOB TYPE -->
+        <!-- ============================================ -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Job Type *"
+            android:textColor="#1A1A1A"
+            android:textStyle="bold" />
+
+
+        <Spinner
+            android:id="@+id/spinnerJobType"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:entries="@array/job_types" />
+
+
+        <!-- ============================================ -->
+        <!-- STATUS -->
+        <!-- ============================================ -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Publish Status"
+            android:textColor="#1A1A1A"
+            android:textStyle="bold" />
+
+
+        <Spinner
+            android:id="@+id/spinnerStatus"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:entries="@array/job_create_statuses" />
+
+
+        <!-- ============================================ -->
+        <!-- PROGRESS -->
+        <!-- ============================================ -->
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:visibility="gone" />
+
+
+        <!-- ============================================ -->
+        <!-- SUBMIT -->
+        <!-- ============================================ -->
+
+        <Button
+            android:id="@+id/btnSubmitJob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Create Job" />
+
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+    </LinearLayout>
+
+</ScrollView>

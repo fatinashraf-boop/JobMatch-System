@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Network Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Storage Permissions for Document Uploads -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="JobMatch"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.JobMatch_Frontend"
+        android:usesCleartextTraffic="true">
+
+        <!-- Initial Entry Screen -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- App Activities -->
+        <activity android:name=".activities.LoginActivity" android:exported="false" />
+        <activity android:name=".activities.RoleSelectionActivity" android:exported="false" />
+        <activity android:name=".activities.RegisterActivity" android:exported="false" />
+        <activity android:name=".activities.JobseekerDashboardActivity" android:exported="false" />
+        <activity android:name=".activities.EmployerDashboardActivity" android:exported="false" />
+        <activity android:name=".activities.CreateJobActivity" android:exported="false" />
+        <activity android:name=".activities.DocumentUploadActivity" android:exported="false" />
+        <activity android:name=".activities.JobDetailActivity" android:exported="true" />
+        <activity android:name=".activities.OcrReviewActivity" android:exported="false" />
+        <activity android:name=".activities.ProfileActivity" android:exported="false" />
+        <activity android:name=".activities.CandidateMatchActivity" android:exported="false" />
+        <activity android:name=".activities.RecommendedJobsActivity" android:exported="false" />
+        <activity
+            android:name=".activities.CreateCompanyAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.RecruiterProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.MyApplicationsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.JobseekerAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ApplicationDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.CandidateDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.MyJobListingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.RecruiterAiMatchesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.BrowseJobsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.RecruiterApplicantsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ShortlistedApplicantsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.RecruiterSearchActivity"
+            android:exported="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+
+        </provider>
+    </application>
+</manifest>

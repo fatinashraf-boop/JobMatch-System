@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F8FA">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#0083B0"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Back"
+            android:src="@android:drawable/ic_menu_revert"
+            app:tint="#FFFFFF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Upload Documents"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+    <!-- SCROLLABLE CONTENT -->
+    <ScrollView
+        android:id="@+id/scrollContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintBottom_toTopOf="@id/btnNextStep"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- MAIN LINEAR LAYOUT -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- TITLE -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Upload Certification&#10;and Qualification"
+                android:textColor="#1A1A1A"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Scan or select files from your storage"
+                android:textColor="#757575"
+                android:textSize="14sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="32dp" />
+
+
+            <!-- SELECT FILE -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnChooseFile"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#F0F7FF"
+                android:text="SELECT FILES"
+                android:textColor="#0C95C0"
+                app:cornerRadius="16dp"
+                app:icon="@android:drawable/ic_menu_add"
+                app:iconGravity="top"
+                app:iconSize="30dp"
+                app:iconTint="#0C95C0" />
+
+
+            <!-- CAMERA -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnOpenCamera"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginBottom="28dp"
+                android:backgroundTint="#0C95C0"
+                android:text="OPEN CAMERA AND SCAN"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="16dp"
+                app:icon="@android:drawable/ic_menu_camera"
+                app:iconGravity="top"
+                app:iconSize="30dp"
+                app:iconTint="#FFFFFF" />
+
+
+            <!-- REAL UPLOADED DOCUMENTS TITLE -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="Uploaded Documents"
+                android:textColor="#1A1A1A"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <!-- EMPTY STATE -->
+            <TextView
+                android:id="@+id/tvNoDocuments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:elevation="1dp"
+                android:gravity="center"
+                android:padding="24dp"
+                android:text="No documents uploaded yet."
+                android:textColor="#777777"
+                android:textSize="14sp" />
+
+
+            <!-- REAL DOCUMENTS ARE ADDED HERE FROM JAVA -->
+            <LinearLayout
+                android:id="@+id/documentListContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical" />
+
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+
+        </LinearLayout>
+        <!-- END MAIN LINEAR LAYOUT -->
+
+    </ScrollView>
+
+
+    <!-- UPLOAD BUTTON -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnNextStep"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#0C95C0"
+        android:contentDescription="Upload selected document"
+        android:text="UPLOAD"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

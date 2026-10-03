@@ -1,0 +1,46 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.JobMatch_Frontend" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Core colors -->
+        <item name="colorPrimary">@color/primary_blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/primary_blue_light</item>
+        <item name="colorOnPrimaryContainer">@color/primary_blue_dark</item>
+
+        <item name="colorSecondary">@color/secondary_blue</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <item name="colorTertiary">@color/tertiary_green</item>
+        <item name="colorOnTertiary">@color/white</item>
+
+        <item name="android:windowBackground">@color/window_background</item>
+        <item name="android:statusBarColor">@color/primary_blue_dark</item>
+
+        <!-- Typography and Surface -->
+        <item name="colorSurface">@color/card_background</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorSurfaceVariant">@color/surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+
+        <!-- Component Styles -->
+        <item name="materialButtonStyle">@style/Widget.JobMatch.Button</item>
+        <item name="textInputStyle">@style/Widget.JobMatch.TextInputLayout</item>
+    </style>
+
+    <style name="Theme.JobMatch_Frontend" parent="Base.Theme.JobMatch_Frontend" />
+
+    <!-- Button Style -->
+    <style name="Widget.JobMatch.Button" parent="Widget.Material3.Button">
+        <item name="shapeAppearance">@style/ShapeAppearance.JobMatch.Small</item>
+    </style>
+
+    <!-- TextInputLayout Style -->
+    <style name="Widget.JobMatch.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/primary_blue</item>
+        <item name="hintTextColor">@color/primary_blue</item>
+    </style>
+
+    <style name="ShapeAppearance.JobMatch.Small" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerSize">10dp</item>
+    </style>
+</resources>

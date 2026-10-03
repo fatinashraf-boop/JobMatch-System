@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="14dp"
+    app:cardBackgroundColor="#F1FAFD"
+    app:cardCornerRadius="18dp"
+    app:cardElevation="4dp"
+    app:strokeColor="#D3EEF6"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <!-- ============================================= -->
+        <!-- TOP ROW -->
+        <!-- ============================================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- COMPANY INITIAL / LOGO -->
+
+            <TextView
+                android:id="@+id/tvCompanyLogo"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:background="#DDF4FA"
+                android:gravity="center"
+                android:text="T"
+                android:textColor="#0C95C0"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <!-- JOB INFORMATION -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvJobTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:text="Junior Android Developer"
+                    android:textColor="#173042"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvCompanyName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:maxLines="2"
+                    android:text="TechNova Solutions Sdn Bhd"
+                    android:textColor="#6D7B86"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!-- MATCH SCORE -->
+
+            <TextView
+                android:id="@+id/tvMatchScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="#E4F7F1"
+                android:paddingStart="12dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="8dp"
+                android:text="89%"
+                android:textColor="#16865C"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <!-- ============================================= -->
+        <!-- SALARY -->
+        <!-- ============================================= -->
+
+        <TextView
+            android:id="@+id/tvSalary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="RM 2,800 - RM 3,800"
+            android:textColor="#173042"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+        <!-- ============================================= -->
+        <!-- LOCATION -->
+        <!-- ============================================= -->
+
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="Ipoh, Perak"
+            android:textColor="#6D7B86"
+            android:textSize="14sp" />
+
+
+        <!-- ============================================= -->
+        <!-- JOB TYPE -->
+        <!-- ============================================= -->
+
+        <TextView
+            android:id="@+id/tvJobType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="#E7F0FF"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="5dp"
+            android:text="Full-time"
+            android:textColor="#3867A6"
+            android:textSize="13sp" />
+
+
+        <!-- ============================================= -->
+        <!-- AI MATCH REASON -->
+        <!-- ============================================= -->
+
+        <TextView
+            android:id="@+id/tvMatchReason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:lineSpacingExtra="2dp"
+            android:maxLines="4"
+            android:text="Strong match. Semantic compatibility is 86.83%. Matched skills: android, java, mysql, rest api."
+            android:textColor="#6D7B86"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

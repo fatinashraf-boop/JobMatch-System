@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="14dp"
+    app:cardBackgroundColor="#F1FAFD"
+    app:cardCornerRadius="18dp"
+    app:cardElevation="3dp"
+    app:strokeColor="#CDECF5"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <!-- TOP ROW -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- CANDIDATE INITIAL -->
+            <TextView
+                android:id="@+id/tvCandidateInitial"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:background="#DDF4FA"
+                android:gravity="center"
+                android:text="A"
+                android:textColor="#0C95C0"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- CANDIDATE INFO -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvCandidateName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="Aiman Hakim"
+                    android:textColor="#173042"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvHeadline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:maxLines="2"
+                    android:text="Junior Android Developer"
+                    android:textColor="#607580"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!-- MATCH SCORE -->
+            <TextView
+                android:id="@+id/tvMatchScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#E4F7F1"
+                android:paddingStart="12dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="8dp"
+                android:text="89%"
+                android:textColor="#16865C"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- RANK -->
+        <TextView
+            android:id="@+id/tvRanking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="#EEE9FF"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="5dp"
+            android:text="#1"
+            android:textColor="#654EA3"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <!-- EXPECTED SALARY -->
+        <TextView
+            android:id="@+id/tvExpectedSalary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Expected: RM 3,000"
+            android:textColor="#173042"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <!-- LOCATION -->
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Ipoh, Perak"
+            android:textColor="#607580"
+            android:textSize="14sp" />
+
+        <!-- AI MATCH REASON -->
+        <TextView
+            android:id="@+id/tvMatchReason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:lineSpacingExtra="2dp"
+            android:maxLines="4"
+            android:text="Strong match. Semantic compatibility is 86.83%. Matched skills: android, java, mysql, rest api."
+            android:textColor="#607580"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

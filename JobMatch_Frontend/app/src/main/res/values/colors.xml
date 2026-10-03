@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="window_background">#F8FAFC</color>
+
+    <!-- Updated Blue & Green Palette -->
+    <color name="primary_blue">#0C95C0</color>
+    <color name="primary_blue_light">#79CFDE</color>
+    <color name="primary_blue_dark">#097293</color>
+    <color name="accent_green">#79DE79</color>
+    <color name="accent_green_light">#A8EAA8</color>
+
+    <color name="secondary_blue">#79CFDE</color>
+    <color name="tertiary_green">#79DE79</color>
+
+    <!-- Backgrounds & Surfaces -->
+    <color name="bg_light_gray">#F1F5F9</color>
+    <color name="surface_variant">#E2E8F0</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="divider_color">#E2E8F0</color>
+
+    <!-- Typography -->
+    <color name="text_primary">#0F172A</color>
+    <color name="text_secondary">#64748B</color>
+    <color name="white">#FFFFFF</color>
+</resources>
