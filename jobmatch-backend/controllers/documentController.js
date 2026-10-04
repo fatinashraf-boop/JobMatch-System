@@ -977,9 +977,11 @@ const removeDocument = async (req, res) => {
         const uploadRoot = path.resolve(__dirname, "../uploads");
         let diskFile = null;
         if (document.file_path) {
-            const candidate = path.resolve(process.cwd(), document.file_path);
+            const candidate = path.isAbsolute(document.file_path)
+                                ? path.resolve(document.file_path)
+                                : path.resolve(__dirname, "..", document.file_path);
             const relative = path.relative(uploadRoot, candidate);
-            if (relative === "" || relative === ".." || relative.startsWith(".." + path.sep) || path.isAbsolute(relative)) {
+            if (relative === ".." || relative.startsWith(".." + path.sep) || path.isAbsolute(relative)) {
                 console.error("Unsafe stored document path; refusing deletion:", document.document_id);
                 return res.status(500).json({ success: false, message: "Document storage path requires administrator review." });
             }
