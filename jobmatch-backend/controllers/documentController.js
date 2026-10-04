@@ -35,7 +35,92 @@ const {
 
 const db = require("../config/db");
 
+// ==========================================
+// CLEAN OCR TEXT FOR DISPLAY / PROCESSING
+// ==========================================
+const cleanOCRText = (rawText) => {
 
+    if (!rawText || typeof rawText !== "string") {
+        return "";
+    }
+
+    let text = rawText
+        .replace(/\r\n/g, "\n")
+        .replace(/\r/g, "\n")
+        .replace(/\t/g, " ")
+
+        // Remove strange invisible/control characters
+        .replace(/[^\x20-\x7E\n\u00A0-\uFFFF]/g, "")
+
+        // Normalize repeated spaces
+        .replace(/[ ]{2,}/g, " ")
+
+        // Remove spaces before punctuation
+        .replace(/\s+([,.;:!?])/g, "$1")
+
+        // Add missing space after common punctuation
+        .replace(/([,;:!?])([A-Za-z])/g, "$1 $2");
+
+    // Clean individual lines
+    let lines = text
+        .split("\n")
+        .map(line => line.trim())
+        .filter((line, index, array) => {
+
+            // Keep intentional blank lines,
+            // but prevent many blank lines together
+            if (line !== "") {
+                return true;
+            }
+
+            return index > 0 &&
+                array[index - 1] !== "";
+        });
+
+    text = lines.join("\n");
+
+    // Add visual separation before common resume headings
+    const headings = [
+        "PROFILE",
+        "SUMMARY",
+        "OBJECTIVE",
+        "EDUCATION",
+        "EXPERIENCE",
+        "WORK EXPERIENCE",
+        "EMPLOYMENT",
+        "SKILLS",
+        "TECHNICAL SKILLS",
+        "SOFT SKILLS",
+        "PROJECTS",
+        "CERTIFICATIONS",
+        "CERTIFICATES",
+        "ACHIEVEMENTS",
+        "LANGUAGES",
+        "REFERENCES",
+        "CONTACT"
+    ];
+
+    for (const heading of headings) {
+
+        const regex =
+            new RegExp(
+                `(^|\\n)\\s*${heading}\\s*:?\\s*(?=\\n|$)`,
+                "gi"
+            );
+
+        text = text.replace(
+            regex,
+            `\n\n${heading}\n`
+        );
+    }
+
+    // Remove excessive blank lines again
+    text = text
+        .replace(/\n{3,}/g, "\n\n")
+        .trim();
+
+    return text;
+};
 
 // ==========================================
 // CREATE / UPLOAD DOCUMENT
@@ -168,6 +253,24 @@ const uploadDocument = async (req, res) => {
 
             ocrResult =
                 await performOCR(file_path);
+
+            // Clean raw Tesseract output
+            const cleanedText =
+                cleanOCRText(ocrResult.text);
+
+            // Keep the cleaned version in the OCR result
+            ocrResult.text =
+                cleanedText;
+
+            console.log(
+                "Cleaned OCR text:",
+                ocrResult.text
+            );
+
+            console.log(
+                "OCR confidence:",
+                ocrResult.confidence
+            );
 
             console.log(
                 "Extracted text:",
