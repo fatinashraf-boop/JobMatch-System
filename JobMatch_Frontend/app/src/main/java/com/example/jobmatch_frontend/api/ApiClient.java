@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 public class ApiClient {
 
     public static final String SERVER_URL =
-            "http://10.14.2.83:5000";
+            "http://192.168.68.52:5000";
 
     private static final String BASE_URL =
             SERVER_URL + "/api/";
