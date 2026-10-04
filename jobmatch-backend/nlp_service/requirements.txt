@@ -1,1 +1,2 @@
+cd jobmatch-backend
 python -m uvicorn nlp_service.main:app --reload --port 8000
